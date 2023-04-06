@@ -22,11 +22,11 @@ class FilamentItalianCitiesServiceProvider extends PluginServiceProvider
     ];
 
     protected array $styles = [
-        'plugin-filament-italian-cities' => __DIR__.'/../resources/dist/filament-italian-cities.css',
+        'plugin-filament-italian-cities' => __DIR__ . '/../resources/dist/filament-italian-cities.css',
     ];
 
     protected array $scripts = [
-        'plugin-filament-italian-cities' => __DIR__.'/../resources/dist/filament-italian-cities.js',
+        'plugin-filament-italian-cities' => __DIR__ . '/../resources/dist/filament-italian-cities.js',
     ];
 
     // protected array $beforeCoreScripts = [
@@ -35,6 +35,9 @@ class FilamentItalianCitiesServiceProvider extends PluginServiceProvider
 
     public function configurePackage(Package $package): void
     {
-        $package->name(static::$name);
+        $package
+            ->name(static::$name)
+            ->hasMigration('create_filament-italian-cities_table.php')
+            ->runsMigrations();
     }
 }
