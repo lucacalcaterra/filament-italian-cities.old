@@ -37,7 +37,7 @@ class FilamentItalianCitiesServiceProvider extends PluginServiceProvider
     {
         $package
             ->name(static::$name)
-            ->hasMigration('create_filament-italian-cities_table')
-            ->runsMigrations();
+            ->hasMigration('create_filament-italian-cities_table');
+            //->runsMigrations();
     }
 }
