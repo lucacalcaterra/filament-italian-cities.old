@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\CityResource\Pages;
+namespace LucaCalcaterra\FilamentItalianCities\Filament\Resources\CityResource\Pages;
 
-use App\Filament\Resources\CityResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\EditRecord;
+use LucaCalcaterra\FilamentItalianCities\Filament\Resources\CityResource;
 
 class EditCity extends EditRecord
 {

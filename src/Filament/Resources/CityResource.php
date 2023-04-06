@@ -1,17 +1,18 @@
 <?php
 
-namespace LucaCalcaterra\FilamentItalianCities;
+namespace LucaCalcaterra\FilamentItalianCities\Filament\Resources;
 
-use Filament\Resources\CityResource\Pages;
-use Filament\Resources\CityResource\RelationManagers;
-use Models\City;
 use Filament\Forms;
-use Filament\Resources\Form;
-use Filament\Resources\Resource;
-use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Resources\Form;
+use Filament\Resources\Table;
+use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use LucaCalcaterra\FilamentItalianCities\Models\City;
+use LucaCalcaterra\FilamentItalianCities\Filament\Resources\CityResource\Pages\EditCity;
+use LucaCalcaterra\FilamentItalianCities\Filament\Resources\CityResource\Pages\CreateCity;
+use LucaCalcaterra\FilamentItalianCities\Filament\Resources\CityResource\Pages\ListCities;
 
 class CityResource extends Resource
 {
@@ -54,9 +55,9 @@ class CityResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCities::route('/'),
-            'create' => Pages\CreateCity::route('/create'),
-            'edit' => Pages\EditCity::route('/{record}/edit'),
+            'index' => ListCities::route('/'),
+            'create' => CreateCity::route('/create'),
+            'edit' => EditCity::route('/{record}/edit'),
         ];
     }
 }

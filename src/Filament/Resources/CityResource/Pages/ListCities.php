@@ -1,10 +1,11 @@
 <?php
 
-namespace LucaCalcaterra\FilamentItalianCities;
+namespace LucaCalcaterra\FilamentItalianCities\Filament\Resources\CityResource\Pages;
 
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\ListRecords;
-use LucaCalcaterra\FilamentItalianCities\CityResource;
+use LucaCalcaterra\FilamentItalianCities\Filament\Resources\CityResource;
+
 
 class ListCities extends ListRecords
 {

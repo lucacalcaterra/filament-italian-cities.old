@@ -4,13 +4,14 @@ namespace LucaCalcaterra\FilamentItalianCities;
 
 use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
+use LucaCalcaterra\FilamentItalianCities\Filament\Resources\CityResource;
 
 class FilamentItalianCitiesServiceProvider extends PluginServiceProvider
 {
     public static string $name = 'filament-italian-cities';
 
     protected array $resources = [
-        // CustomResource::class,
+        CityResource::class
     ];
 
     protected array $pages = [
