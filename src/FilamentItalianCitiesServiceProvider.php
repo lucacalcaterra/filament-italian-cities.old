@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace LucaCalcaterra\FilamentItalianCities;
 
 use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 
-class SkeletonServiceProvider extends PluginServiceProvider
+class FilamentItalianCitiesServiceProvider extends PluginServiceProvider
 {
-    public static string $name = 'skeleton';
+    public static string $name = 'filament-italian-cities';
 
     protected array $resources = [
         // CustomResource::class,
@@ -22,15 +22,15 @@ class SkeletonServiceProvider extends PluginServiceProvider
     ];
 
     protected array $styles = [
-        'plugin-skeleton' => __DIR__.'/../resources/dist/skeleton.css',
+        'plugin-filament-italian-cities' => __DIR__.'/../resources/dist/filament-italian-cities.css',
     ];
 
     protected array $scripts = [
-        'plugin-skeleton' => __DIR__.'/../resources/dist/skeleton.js',
+        'plugin-filament-italian-cities' => __DIR__.'/../resources/dist/filament-italian-cities.js',
     ];
 
     // protected array $beforeCoreScripts = [
-    //     'plugin-skeleton' => __DIR__ . '/../resources/dist/skeleton.js',
+    //     'plugin-filament-italian-cities' => __DIR__ . '/../resources/dist/filament-italian-cities.js',
     // ];
 
     public function configurePackage(Package $package): void
