@@ -7,19 +7,17 @@ use Filament\Tables;
 use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
-use Filament\Tables\Filters\Filter;
-use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use LucaCalcaterra\FilamentItalianCities\Models\City;
-use LucaCalcaterra\FilamentItalianCities\Filament\Resources\CityResource\Pages\EditCity;
-use LucaCalcaterra\FilamentItalianCities\Filament\Resources\CityResource\Pages\CreateCity;
-use LucaCalcaterra\FilamentItalianCities\Filament\Resources\CityResource\Pages\ListCities;
+use LucaCalcaterra\FilamentItalianCities\Models\Province;
+use LucaCalcaterra\FilamentItalianCities\Filament\Resources\ProvinceResource\Pages\EditProvince;
+use LucaCalcaterra\FilamentItalianCities\Filament\Resources\ProvinceResource\Pages\ListProvinces;
+use LucaCalcaterra\FilamentItalianCities\Filament\Resources\ProvinceResource\Pages\CreateProvince;
 
-class CityResource extends Resource
+class ProvinceResource extends Resource
 {
-    protected static ?string $model = City::class;
+    protected static ?string $model = Province::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -36,8 +34,7 @@ class CityResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')->searchable()->sortable(),
-                TextColumn::make('province.codice')->sortable()->label('Pr. Code'),
-                TextColumn::make('province.name')->sortable()->label('Pr. Name')
+                TextColumn::make('codice')->searchable()->sortable()
             ])
             ->filters([
                 //
@@ -60,9 +57,9 @@ class CityResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => ListCities::route('/'),
-            'create' => CreateCity::route('/create'),
-            'edit' => EditCity::route('/{record}/edit'),
+            'index' => ListProvinces::route('/'),
+            'create' => CreateProvince::route('/create'),
+            'edit' => EditProvince::route('/{record}/edit'),
         ];
     }
 }
