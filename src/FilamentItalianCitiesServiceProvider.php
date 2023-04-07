@@ -3,10 +3,11 @@
 namespace LucaCalcaterra\FilamentItalianCities;
 
 use Filament\PluginServiceProvider;
+use Filament\Navigation\UserMenuItem;
 use Spatie\LaravelPackageTools\Package;
+use LucaCalcaterra\FilamentItalianCities\Models\Province;
 use LucaCalcaterra\FilamentItalianCities\Filament\Resources\CityResource;
 use LucaCalcaterra\FilamentItalianCities\Filament\Resources\ProvinceResource;
-use LucaCalcaterra\FilamentItalianCities\Models\Province;
 
 class FilamentItalianCitiesServiceProvider extends PluginServiceProvider
 {
