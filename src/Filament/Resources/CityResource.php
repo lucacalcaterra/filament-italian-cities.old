@@ -37,10 +37,9 @@ class CityResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('comune')->searchable()->sortable(),
-                TextColumn::make('comune')->searchable()->sortable(),
+                TextColumn::make('name')->searchable()->sortable(),
+                TextColumn::make('sigla')->sortable()->label('Pr. Code'),
                 TextColumn::make('den_prov')->sortable()->label('Pr. Name'),
-                TextColumn::make('sigla')->sortable()->label('Pr. Code')
             ])
             ->filters([
                 //
@@ -50,7 +49,7 @@ class CityResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
-            ])->defaultSort('comune');
+            ])->defaultSort('name');
     }
 
     public static function getRelations(): array

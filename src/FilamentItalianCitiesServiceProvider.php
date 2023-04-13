@@ -14,8 +14,7 @@ class FilamentItalianCitiesServiceProvider extends PluginServiceProvider
     public static string $name = 'filament-italian-cities';
 
     protected array $resources = [
-        CityResource::class,
-        ProvinceResource::class
+        CityResource::class
     ];
 
     protected array $pages = [
